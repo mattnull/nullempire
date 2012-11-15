@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Null Empire</title>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+	</head>
+	<style>
+	::selection {
+		background:rgba(37,25,48,0.7);;
+		color:#fff;
+	}
+
+	::-moz-selection {
+		background:rgba(37,25,48,0.7);;
+		color:#fff;
+	}
+
+	::-webkit-selection {
+		background:rgba(37,25,48,0.7);;
+		color:#fff;
+	}
+	body, h1, h2 {
+	   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	   font-weight: 300;
+	   	padding:0;
+		margin:0;
+		color:#666;
+	}
+	#wrapper{
+		margin:0 auto;
+	}
+	#splash{
+		background:rgba(37,25,48,0.6);
+		padding:30px 0 60px 0
+	}
+	#splash .inner{
+		font-size:940%;
+		color:rgba(255,255,255,0);
+		text-align: center;
+		opacity:1;
+		-webkit-transition: all 2s ease-in-out;
+	}
+	#splash .inner.show{
+		opacity:1;
+		color:rgba(255,255,255,1);
+	}
+	#splash .inner.highlight{
+		color:#fff;
+		text-shadow:0px 0px 50px rgba(70,147,250,1);
+	}
+	.inner{
+		width:650px;
+		margin:0 auto;
+	}
+
+	/** sections **/
+	#about h2, #projects h2, #contact h2{
+		text-align: center;
+		font-size: 3em;
+	}
+
+	/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+	</style>
+	<div id="wrapper">
+		<header class="inner">
+			<h2>Null Empire</h2>
+		</header>
+		<section id="splash">
+			<div class="inner">
+				<h2>Null Empire</h2>
+			</div>
+		</section>
+		<section id="about" class="inner">
+			<h2>About</h2>
+		</section>
+		<section id="projects" class="inner">
+			<h2>Projects</h2>
+		</section>
+		<section id="contact" class="inner">
+			<h2>Contact</h2>
+		</section>
+	</div>
+	<script>
+	$(function(){
+		var words = [
+			'{Build}',
+			'{Create}',
+			'{Innovate}'
+		];
+		var splash = $('#splash .inner');
+
+		splash.html(words[Math.floor(Math.random() * words.length)]);
+		splash.addClass('highlight')
+		setTimeout(function(){
+			splash.addClass('show');
+			splash.removeClass('highlight')
+		}, 3000)
+	});
+	</script>
+</html>
