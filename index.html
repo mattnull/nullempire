@@ -70,6 +70,7 @@
 	.inner{
 		width:650px;
 		margin:0 auto;
+		overflow: hidden;
 	}
 	header{
 		padding:30px 0;
@@ -118,6 +119,7 @@
 		color:#111;
 		background: #fff;
 		padding:20px;
+		margin:5px;
 	}
 	/** sections **/
 	#about h2, #projects h2, #contact h2{
@@ -130,10 +132,13 @@
 		background:rgba(70,147,250,0.6);
 		position: relative;
 		overflow: hidden;
-		height:500px;
 	}
+
 	#about p.text{
 		position: relative;
+		width:42%;
+		float:left;
+		height:500px;
 		/*right:-2000px;*/
 		/*width:500px;*/
 		/*-webkit-transform: rotate(30deg);*/
@@ -230,20 +235,27 @@
 		</section>
 		<section id="about">
 			<div class="inner">
-				<h2>About</h2>
-				<p class="text">
-					vulputate hendrerit eros vitae lobortis. Nulla facilisi. Praesent ultrices ante et est congue faucibus adipiscing velit laoreet. Quisque posuere, orci non eleifend pretium, sem leo dapibus arcu, eu vulputate nibh nibh eget odio. Curabitur viverra lacinia tortor, non facilisis elit rutrum non. Aliquam elementum congue sagittis. Curabitur bibendum lobortis velit, eget pellentesque ligula fermentum non. Morbi posuere, velit vitae egestas facilisis, massa felis scelerisque arcu, eu bibendum enim tellus non massa. In eleifend, mi vel viverra porttitor, mi nibh tincidunt nunc, ut lobortis purus nisl id ante. Maecenas a tortor mollis lectus tincidunt aliquam. Suspendisse potenti. Sed facilisis ullamcorper metus, ut varius justo dignissim ac.
-					<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum libero eu lacus luctus faucibus. Maecenas aliquam dignissim euismod. Etiam vulputate hendrerit eros vitae lobortis. Nulla facilisi. Praesent ultrices ante et est congue faucibus adipiscing velit laoreet. Quisque posuere, orci non eleifend pretium, sem leo dapibus arcu, eu vulputate nibh nibh eget odio. Curabitur viverra lacinia tortor, non facilisis elit rutrum non. Aliquam elementum congue sagittis. Curabitur bibendum lobortis velit, eget pellentesque ligula fermentum non. Morbi posuere, velit vitae egestas facilisis, massa felis scelerisque arcu, eu bibendum enim tellus non massa. In eleifend, mi vel viverra porttitor, mi nibh tincidunt nunc, ut lobortis purus nisl id ante. Maecenas a tortor mollis lectus tincidunt aliquam. Suspendisse potenti. Sed facilisis ullamcorper metus, ut varius justo dignissim ac.
-
-Duis et erat id nibh interdum iaculis. Aliquam gravida dui a felis egestas ut vehicula odio viverra. Aliquam ornare fringilla sapien eu porttitor. Quisque sed massa nisl, a viverra urna. Etiam cursus mollis massa, nec egestas eros laoreet eu. Fusce congue felis id dui dignissim in porta libero pellentesque. Aliquam vel erat enim. Nulla bibendum hendrerit nibh vitae dictum.
-
-Donec egestas laoreet enim, et viverra urna dignissim eget. Vestibulum vel sagittis lectus. Suspendisse potenti. Phasellus ut ultrices urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pharetra malesuada placerat. Nulla nec consequat justo. Ut imperdiet lorem ut erat imperdiet eu auctor risus semper. Praesent luctus placerat magna, ac pretium ipsum convallis vitae. Donec convallis metus at libero tincidunt faucibus. Aliquam erat volutpat. Nam ullamcorper, felis nec condimentum commodo, turpis turpis fermentum mi, lacinia adipiscing orci dolor non sem. Curabitur vulputate commodo neque faucibus viverra. Etiam non augue ut mi feugiat dictum. Aenean malesuada consectetur auctor. Nulla et nibh risus, quis consequat erat.
-
-Maecenas ut tellus quis lorem fermentum varius. Ut magna justo, pellentesque aliquam interdum sagittis, pretium vel nibh. Fusce dui ligula, ullamcorper nec placerat eget, condimentum id sapien. Nunc ultrices enim sit amet eros condimentum eleifend sit amet eget augue. Cras lectus dui, dignissim id adipiscing eu, consectetur ut turpis. Quisque egestas diam luctus ante fringilla ultricies. Duis laoreet tellus ligula. Donec ac mi purus. Vestibulum eu sem a tortor elementum semper. Vivamus venenatis mi at diam ullamcorper aliquam. Nulla vel ornare est.
-
-Morbi massa massa, viverra et laoreet eget, ultricies non justo. Morbi vitae sapien non nunc auctor hendrerit. Aenean tincidunt rhoncus lobortis. Nam placerat aliquet feugiat. Fusce ut dui libero, eu adipiscing tortor. Nullam luctus facilisis lorem volutpat tincidunt. Vivamus commodo, leo at dictum congue, sem nulla sodales quam, nec egestas neque odio at ante.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum libero eu lacus luctus faucibus. Maecenas aliquam dignissim euismod. Etiam vulputate hendrerit eros vitae lobortis. Nulla facilisi. Praesent ultrices ante et est congue faucibus adipiscing velit laoreet. Quisque posuere, orci non eleifend pretium, sem leo dapibus arcu, eu vulputate nibh nibh eget odio. Curabitur viverra lacinia tortor, non facilisis elit rutrum non. Aliquam elementum congue sagittis. Curabitur bibendum lobortis velit, eget pellentesque ligula fermentum non. Morbi posuere, velit vitae egestas facilisis, massa felis scelerisque arcu, eu bibendum enim tellus non massa. In eleifend, mi vel viverra porttitor, mi nibh tincidunt nunc, ut lobortis purus nisl id ante. Maecenas a tortor mollis lectus tincidunt aliquam. Suspendisse potenti. Sed facilisis ullamcorper metus, ut varius justo dignissim ac.lam luctus facilisis lorem volutpat tincidunt. Vivamus commodo, leo at dictum congue, sem nulla sodales quam, nec egestas neque odio at ante. -->
-				</p>
+				<h2><-- We Build --></h2>
+				<ul class="big-list">
+					<li>
+						Websites
+					</li>
+					<li>
+						Web Applications
+					</li>
+					<li>
+						Mobile Web Applications
+					</li>
+					<li>
+						iPhone Apps
+					</li>
+					<li>
+						Android Apps
+					</li>
+					<li>
+						Rapid Prototypes
+					</li>
+				</ul>
 			</div>
 		</section>
 		<section id="projects">
