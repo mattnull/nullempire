@@ -27,6 +27,11 @@
 		margin:0;
 		color:#666;
 	}
+	ul,li{
+		list-style: none;
+		margin:0;
+		padding:0;
+	}
 	#watermark{
 		text-transform: uppercase;
 		color: white;
@@ -86,15 +91,25 @@
 	nav ul li{
 		display: inline-block;
 	}
+	ul.big-list li{
+		background:#fff;
+		margin:10px 0;
+		padding:20px 10px;
+		font-size:2.5em;
+		border-radius: 5px;
+	}
 	p.text{
 		line-height: 2.5em;
 		color:#111;
+		background: #fff;
+		padding:20px;
 	}
 	/** sections **/
 	#about h2, #projects h2, #contact h2{
 		text-align: center;
 		font-size: 3em;
 		color:#fff;
+		margin-bottom:30px;
 	}
 	#about{
 		background:rgba(70,147,250,0.6);
@@ -199,6 +214,7 @@
 			<div class="inner">
 				<h2>About</h2>
 				<p class="text">
+					vulputate hendrerit eros vitae lobortis. Nulla facilisi. Praesent ultrices ante et est congue faucibus adipiscing velit laoreet. Quisque posuere, orci non eleifend pretium, sem leo dapibus arcu, eu vulputate nibh nibh eget odio. Curabitur viverra lacinia tortor, non facilisis elit rutrum non. Aliquam elementum congue sagittis. Curabitur bibendum lobortis velit, eget pellentesque ligula fermentum non. Morbi posuere, velit vitae egestas facilisis, massa felis scelerisque arcu, eu bibendum enim tellus non massa. In eleifend, mi vel viverra porttitor, mi nibh tincidunt nunc, ut lobortis purus nisl id ante. Maecenas a tortor mollis lectus tincidunt aliquam. Suspendisse potenti. Sed facilisis ullamcorper metus, ut varius justo dignissim ac.
 					<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum libero eu lacus luctus faucibus. Maecenas aliquam dignissim euismod. Etiam vulputate hendrerit eros vitae lobortis. Nulla facilisi. Praesent ultrices ante et est congue faucibus adipiscing velit laoreet. Quisque posuere, orci non eleifend pretium, sem leo dapibus arcu, eu vulputate nibh nibh eget odio. Curabitur viverra lacinia tortor, non facilisis elit rutrum non. Aliquam elementum congue sagittis. Curabitur bibendum lobortis velit, eget pellentesque ligula fermentum non. Morbi posuere, velit vitae egestas facilisis, massa felis scelerisque arcu, eu bibendum enim tellus non massa. In eleifend, mi vel viverra porttitor, mi nibh tincidunt nunc, ut lobortis purus nisl id ante. Maecenas a tortor mollis lectus tincidunt aliquam. Suspendisse potenti. Sed facilisis ullamcorper metus, ut varius justo dignissim ac.
 
 Duis et erat id nibh interdum iaculis. Aliquam gravida dui a felis egestas ut vehicula odio viverra. Aliquam ornare fringilla sapien eu porttitor. Quisque sed massa nisl, a viverra urna. Etiam cursus mollis massa, nec egestas eros laoreet eu. Fusce congue felis id dui dignissim in porta libero pellentesque. Aliquam vel erat enim. Nulla bibendum hendrerit nibh vitae dictum.
@@ -215,6 +231,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum li
 		<section id="projects">
 			<div class="inner">
 				<h2>Projects</h2>
+				<ul class="big-list">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
 			</div>
 		</section>
 		<section id="contact">
