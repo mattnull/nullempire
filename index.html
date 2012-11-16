@@ -3,6 +3,7 @@
 	<head>
 		<title>Null Empire</title>
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="jquery.scrollto.min.js"></script>
 	</head>
 	<style>
 	::selection {
@@ -26,6 +27,22 @@
 		margin:0;
 		color:#666;
 	}
+	#watermark{
+		text-transform: uppercase;
+		color: white;
+		text-shadow: 0px 0px 2px rgba(17, 17, 17, 0.6);
+		font-size: 30em;
+		color: white;
+		position: absolute;
+		z-index: -5;
+		left: 0;
+		top:0;
+		opacity:0;
+		-webkit-transition:opacity 5s ease-in-out;
+	}
+	#watermark.show{
+		opacity: 0.6;
+	}
 	#wrapper{
 		margin:0 auto;
 	}
@@ -37,109 +54,172 @@
 		font-size:940%;
 		color:rgba(255,255,255,0);
 		text-align: center;
-		opacity:1;
 		-webkit-transition: all 2s ease-in-out;
 	}
 	#splash .inner.show{
-		opacity:1;
 		color:rgba(255,255,255,1);
 	}
 	#splash .inner.highlight{
-		color:#fff;
 		text-shadow:0px 0px 50px rgba(70,147,250,1);
 	}
 	.inner{
 		width:650px;
 		margin:0 auto;
 	}
+	header{
+		padding:30px 0;
+		overflow: hidden;
+	}
+	nav{
+		text-align: center;
+	}
+	nav ul, nav li{
+		list-style:none;
+		margin:0;
+		padding:0;
 
+	}
+	nav ul li{
+		display: inline-block;
+	}
+	p.text{
+		line-height: 2.5em;
+		color:#111;
+	}
 	/** sections **/
 	#about h2, #projects h2, #contact h2{
 		text-align: center;
 		font-size: 3em;
+		color:#fff;
+	}
+	#about{
+		background:rgba(70,147,250,0.6);
+		position: relative;
+		overflow: hidden;
+		height:500px;
+	}
+	#about p.text{
+		position: relative;
+		/*right:-2000px;*/
+		/*width:500px;*/
+		/*-webkit-transform: rotate(30deg);*/
+	}
+	#projects{
+		height:500px;
+		background:rgba(140,199,90,0.6);
+	}
+	#contact{
+		height:500px;
+		background:rgba(36,36,36,0.6)
+	}
+	/* Smartphones (portrait and landscape) ----------- */
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) {
+	/* Styles */
 	}
 
-	/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
-}
+	/* Smartphones (landscape) ----------- */
+	@media only screen 
+	and (min-width : 321px) {
+	/* Styles */
+	}
 
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
-}
+	/* Smartphones (portrait) ----------- */
+	@media only screen 
+	and (max-width : 320px) {
+	/* Styles */
+	}
 
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-/* Styles */
-}
+	/* iPads (portrait and landscape) ----------- */
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) {
+	/* Styles */
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-/* Styles */
+	}
 
-}
+	/* iPads (landscape) ----------- */
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : landscape) {
+	/* Styles */
+	}
 
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
-}
+	/* iPads (portrait) ----------- */
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : portrait) {
+	/* Styles */
+	}
 
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-/* Styles */
-}
+	/* Desktops and laptops ----------- */
+	@media only screen 
+	and (min-width : 1224px) {
+	/* Styles */
+	}
 
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-/* Styles */
-}
+	/* Large screens ----------- */
+	@media only screen 
+	and (min-width : 1824px) {
+	/* Styles */
+	}
 
-/* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
-/* Styles */
-}
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
-}
+	/* iPhone 4 ----------- */
+	@media
+	only screen and (-webkit-min-device-pixel-ratio : 1.5),
+	only screen and (min-device-pixel-ratio : 1.5) {
+	/* Styles */
+	}
 	</style>
 	<div id="wrapper">
-		<header class="inner">
-			<h2>Null Empire</h2>
+		<header>
+			<div class="inner">
+				<nav>
+					<ul>
+						<li><a href="#about">About</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
 		</header>
 		<section id="splash">
 			<div class="inner">
 				<h2>Null Empire</h2>
 			</div>
 		</section>
-		<section id="about" class="inner">
-			<h2>About</h2>
+		<section id="about">
+			<div class="inner">
+				<h2>About</h2>
+				<p class="text">
+					<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum libero eu lacus luctus faucibus. Maecenas aliquam dignissim euismod. Etiam vulputate hendrerit eros vitae lobortis. Nulla facilisi. Praesent ultrices ante et est congue faucibus adipiscing velit laoreet. Quisque posuere, orci non eleifend pretium, sem leo dapibus arcu, eu vulputate nibh nibh eget odio. Curabitur viverra lacinia tortor, non facilisis elit rutrum non. Aliquam elementum congue sagittis. Curabitur bibendum lobortis velit, eget pellentesque ligula fermentum non. Morbi posuere, velit vitae egestas facilisis, massa felis scelerisque arcu, eu bibendum enim tellus non massa. In eleifend, mi vel viverra porttitor, mi nibh tincidunt nunc, ut lobortis purus nisl id ante. Maecenas a tortor mollis lectus tincidunt aliquam. Suspendisse potenti. Sed facilisis ullamcorper metus, ut varius justo dignissim ac.
+
+Duis et erat id nibh interdum iaculis. Aliquam gravida dui a felis egestas ut vehicula odio viverra. Aliquam ornare fringilla sapien eu porttitor. Quisque sed massa nisl, a viverra urna. Etiam cursus mollis massa, nec egestas eros laoreet eu. Fusce congue felis id dui dignissim in porta libero pellentesque. Aliquam vel erat enim. Nulla bibendum hendrerit nibh vitae dictum.
+
+Donec egestas laoreet enim, et viverra urna dignissim eget. Vestibulum vel sagittis lectus. Suspendisse potenti. Phasellus ut ultrices urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pharetra malesuada placerat. Nulla nec consequat justo. Ut imperdiet lorem ut erat imperdiet eu auctor risus semper. Praesent luctus placerat magna, ac pretium ipsum convallis vitae. Donec convallis metus at libero tincidunt faucibus. Aliquam erat volutpat. Nam ullamcorper, felis nec condimentum commodo, turpis turpis fermentum mi, lacinia adipiscing orci dolor non sem. Curabitur vulputate commodo neque faucibus viverra. Etiam non augue ut mi feugiat dictum. Aenean malesuada consectetur auctor. Nulla et nibh risus, quis consequat erat.
+
+Maecenas ut tellus quis lorem fermentum varius. Ut magna justo, pellentesque aliquam interdum sagittis, pretium vel nibh. Fusce dui ligula, ullamcorper nec placerat eget, condimentum id sapien. Nunc ultrices enim sit amet eros condimentum eleifend sit amet eget augue. Cras lectus dui, dignissim id adipiscing eu, consectetur ut turpis. Quisque egestas diam luctus ante fringilla ultricies. Duis laoreet tellus ligula. Donec ac mi purus. Vestibulum eu sem a tortor elementum semper. Vivamus venenatis mi at diam ullamcorper aliquam. Nulla vel ornare est.
+
+Morbi massa massa, viverra et laoreet eget, ultricies non justo. Morbi vitae sapien non nunc auctor hendrerit. Aenean tincidunt rhoncus lobortis. Nam placerat aliquet feugiat. Fusce ut dui libero, eu adipiscing tortor. Nullam luctus facilisis lorem volutpat tincidunt. Vivamus commodo, leo at dictum congue, sem nulla sodales quam, nec egestas neque odio at ante.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum libero eu lacus luctus faucibus. Maecenas aliquam dignissim euismod. Etiam vulputate hendrerit eros vitae lobortis. Nulla facilisi. Praesent ultrices ante et est congue faucibus adipiscing velit laoreet. Quisque posuere, orci non eleifend pretium, sem leo dapibus arcu, eu vulputate nibh nibh eget odio. Curabitur viverra lacinia tortor, non facilisis elit rutrum non. Aliquam elementum congue sagittis. Curabitur bibendum lobortis velit, eget pellentesque ligula fermentum non. Morbi posuere, velit vitae egestas facilisis, massa felis scelerisque arcu, eu bibendum enim tellus non massa. In eleifend, mi vel viverra porttitor, mi nibh tincidunt nunc, ut lobortis purus nisl id ante. Maecenas a tortor mollis lectus tincidunt aliquam. Suspendisse potenti. Sed facilisis ullamcorper metus, ut varius justo dignissim ac.lam luctus facilisis lorem volutpat tincidunt. Vivamus commodo, leo at dictum congue, sem nulla sodales quam, nec egestas neque odio at ante. -->
+				</p>
+			</div>
 		</section>
-		<section id="projects" class="inner">
-			<h2>Projects</h2>
+		<section id="projects">
+			<div class="inner">
+				<h2>Projects</h2>
+			</div>
 		</section>
-		<section id="contact" class="inner">
-			<h2>Contact</h2>
+		<section id="contact">
+			<div class="inner">
+				<h2>Contact</h2>
+			</div>
 		</section>
 	</div>
+	<div id="watermark">Null Empire</div>
 	<script>
 	$(function(){
 		var words = [
@@ -154,7 +234,48 @@ only screen and (min-device-pixel-ratio : 1.5) {
 		setTimeout(function(){
 			splash.addClass('show');
 			splash.removeClass('highlight')
-		}, 3000)
+			$('#watermark').addClass('show')
+		}, 2000)
+
+		$('nav a').on('click', function(e){
+			var href = $(this).attr('href');
+			e.preventDefault();
+
+			$(window).scrollTo($(href), 200);
+		});
+
+		/** FACNY SCROLL like http://nizoapp.com/ **/
+		/** 
+		ON scroll get the position of the page and suck in its UI elements as you get closer to it 
+			example - when you get closer to the contacts page the form gets sucked into the container in peices
+			... calculate container position as it approaches zero
+		**/
+		
+		right = -2000;
+		angle = 70;
+
+		var elements = [{
+			container : $('#about .inner'),
+			objects : $('#about p.text')
+		}];
+
+		// $(window).scroll(function(){
+		// 	//DO THE MAGIC
+		// 	var scrollTop = $(this).scrollTop();
+		// 	for(var i = 0; i < elements.length; i++){
+		// 		var el = elements[i].container;
+		// 		var elOffset = el.offset();
+		// 		var elLeft = elOffset.left;
+		// 		var elCenter = elOffset.left - el.width() / 2;
+		// 		var viewportPos = elOffset.top - scrollTop;
+		// 		var o = elements[i].objects;
+		// 		var objectPos = o.offset().left - o.width();
+		// 		pos = viewportPos / right
+		// 		console.log(viewportPos, right)
+		// 		$('#about p.text').css({'right' : pos+'px'});
+		// 		right += pos;
+		// 	}
+		// });
 	});
 	</script>
 </html>
