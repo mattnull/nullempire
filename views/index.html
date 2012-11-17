@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<title>Null Empire</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script src="javascript/jquery.scrollto.min.js"></script>
 	</head> 
@@ -114,7 +116,7 @@
 		text-shadow:1px 1px 1px #fff;
 	}
 	nav a:hover{
-		color:rgba(140,199,90,0.6);
+		color:rgba(37,25,48,0.6);
 		text-shadow:none;
 	}
 	ul.big-list li{
@@ -264,7 +266,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="whatwebuild">
+<!-- 		<section id="whatwebuild">
 			<div class="inner">
 				<h1>WHAT WE BUILD</h1>
 				<ul class="big-list">
@@ -304,9 +306,9 @@
 			<div class="inner">
 				<h2>Contact</h2>
 			</div>
-		</section>
+		</section> -->
 	</div>
-	<div id="watermark">Null Empire</div>
+	<!-- <div id="watermark">Null Empire</div> -->
 	<script>
 	$(function(){
 		var words = [
@@ -352,11 +354,11 @@
 		}];
 		var whatwebuild = $('#whatwebuild');
 
-		$(window).scroll(function(){
-			var scrollTop = $(this).scrollTop();
-			var pos = whatwebuild.offset().top;
-			console.log(pos, scrollTop)
-		});
+		// $(window).scroll(function(){
+		// 	var scrollTop = $(this).scrollTop();
+		// 	var pos = whatwebuild.offset().top;
+		// 	console.log(pos, scrollTop)
+		// });
 		// $(window).scroll(function(){
 		// 	//DO THE MAGIC
 		// 	var scrollTop = $(this).scrollTop();
