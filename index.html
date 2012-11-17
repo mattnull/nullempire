@@ -53,18 +53,17 @@
 	}
 	#splash{
 		/*background:rgba(37,25,48,0.6);*/
-		padding:30px 0 60px 0
-	}
-	#splash .inner{
+		padding:30px 0 60px 0;
+		height:200px;
+		text-align: center;
 		font-size:940%;
 		color:rgba(255,255,255,0);
-		text-align: center;
 		-webkit-transition: all 2s ease-in-out;
 	}
-	#splash .inner.show{
+	#splash.show{
 		color:rgba(1,1,1,1);
 	}
-	#splash .inner.highlight{
+	#splash.highlight{
 		text-shadow:0px 0px 50px rgba(70,147,250,1);
 	}
 	.inner{
@@ -75,13 +74,18 @@
 	header{
 		padding:30px 0;
 		overflow: hidden;
+		position: fixed;
+		top:0;
+		right:0;
+		z-index: 1000;
+		padding-right: 20px;
 		/*background:rgba(140, 199, 90, 0.6)*/
 	}
 	section{
 		padding:20px 0;
 	}
 	nav{
-		text-align: center;
+		text-align: right;
 	}
 	nav ul, nav li{
 		list-style:none;
@@ -104,7 +108,7 @@
 		text-shadow:1px 1px 1px #fff;
 	}
 	nav a:hover{
-		color:#fff;
+		color:rgba(140,199,90,0.6);
 		text-shadow:none;
 	}
 	ul.big-list li{
@@ -167,7 +171,14 @@
 		border-radius:500px;
 		height:550px;
 		width:550px;
-		border:20px solid #333
+		border:20px solid #333;
+		position: relative;
+		top:-140px;
+		-webkit-transition:top 0.3s ease-in-out;
+
+	}
+	#team.show{
+		margin-top:-153px;
 	}
 	#team h1{
 		margin-top: 64px;
@@ -185,12 +196,13 @@
 	}
 
 	#me{
+		z-index:2;
 		background: url('me.jpg') 0 0 no-repeat;
 		background-size: 200%;
 		border-radius: 300px;
 		background-position: -68px -31px;
 		position: relative;
-		top: 179px;
+		top: 58px;
 		left: 35%;
 		-webkit-transition:all 0.6s ease-in-out;
 	}
@@ -218,6 +230,9 @@
 	.off-screen-right{
 		right:-5000px;
 	}
+	.off-screen-top{
+		top:-5000px !important;
+	}
 	.show{
 		opacity: 1 !important;
 	}
@@ -234,14 +249,10 @@
 				</nav>
 			</div>
 		</header>
-		<section id="splash">
-			<div class="inner">
-				<h2>Null Empire</h2>
-			</div>
-		</section>
+		<section id="splash"></section>
 		<section id="about">
 			<div id="me"></div>
-			<div id="team" class="inner">
+			<div id="team" class="inner off-screen-top">
 				<div class="text" class="inner">
 					<h1>Who runs the Null Empire? <span id="who">It's Matt Null.</span></h1>
 				</div>
@@ -297,7 +308,7 @@
 			'{Create}',
 			'{Innovate}'
 		];
-		var splash = $('#splash .inner');
+		var splash = $('#splash');
 
 		splash.html(words[Math.floor(Math.random() * words.length)]);
 		splash.addClass('highlight')
@@ -305,6 +316,7 @@
 			splash.addClass('show');
 			splash.removeClass('highlight')
 			$('#watermark').addClass('show')
+			$('#team').removeClass('off-screen-top');
 			$('#me').addClass('show');
 			setTimeout(function(){
 				$('#who').addClass('show');
