@@ -199,6 +199,13 @@
 		height: 200px;
 		border: 30px solid rgba(70, 147, 250, 0.6);
 	}
+	#who{
+		-webkit-transition:opacity 0.2s ease-in-out;
+	}
+	#who{
+		opacity: 0;
+	}
+
 	#whatwebuild{
 		-webkit-transition:all 0.2s ease-in-out;
 		position: relative;
@@ -210,6 +217,9 @@
 	}
 	.off-screen-right{
 		right:-5000px;
+	}
+	.show{
+		opacity: 1 !important;
 	}
 	</style>
 	<div id="wrapper">
@@ -233,7 +243,7 @@
 			<div id="me"></div>
 			<div id="team" class="inner">
 				<div class="text" class="inner">
-					<h1>Who runs the Null Empire? It's Matt Null. Duh.</h1>
+					<h1>Who runs the Null Empire? <span id="who">It's Matt Null.</span></h1>
 				</div>
 			</div>
 		</section>
@@ -295,7 +305,10 @@
 			splash.addClass('show');
 			splash.removeClass('highlight')
 			$('#watermark').addClass('show')
-			$('#me').addClass('show')
+			$('#me').addClass('show');
+			setTimeout(function(){
+				$('#who').addClass('show');
+			}, 1000)
 		}, 2000)
 
 		$('nav a').on('click', function(e){
