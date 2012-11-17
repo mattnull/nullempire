@@ -6,13 +6,25 @@
 
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script src="javascript/jquery.scrollto.min.js"></script>
+		<script src="javascript/jquery.kinetic.js"></script>
+
 	</head> 
 	<style>
 	body{
+	}
+	#bg{
 		background:url('img/office.jpg') 0 0 no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
-
+		background-position: center top;
+/*		width:100%;
+*/		min-height:100%;
+		position: fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		z-index: -5;
 	}
 	::selection {
 		background:rgba(37,25,48,0.7);;
@@ -56,22 +68,25 @@
 	#watermark.show{
 		opacity: 0.6;
 	}
-	#wrapper{
-		margin:0 auto;
-	}
+
 	#splash{
-		/*background:rgba(37,25,48,0.6);*/
-		padding:30px 0 60px 0;
-		height:200px;
+		padding: 46px 0 14px 0;
+		height: 179px;
 		text-align: center;
-		font-size:940%;
-		color:rgba(255,255,255,0);
-		-webkit-transition: all 2s ease-in-out;
+		font-size: 8em;
+
 	}
-	#splash.show{
-		color:rgba(1,1,1,1);
+	#logo{
+		font-weight: 900;
 	}
-	#splash.highlight{
+	#word{
+		color: rgba(37, 25, 48, 0);
+		-webkit-transition: all 4s ease-in-out;
+	}
+	#word.show{
+		color:rgba(37, 25, 48, 1);
+	}
+	#word.highlight{
 		text-shadow:0px 0px 50px rgba(70,147,250,1);
 	}
 	.inner{
@@ -80,13 +95,15 @@
 		overflow: hidden;
 	}
 	header{
-		padding:30px 0;
+		padding:10px 0;
 		overflow: hidden;
 		position: fixed;
 		top:0;
 		right:0;
 		z-index: 1000;
 		padding-right: 20px;
+		width:100%;
+		background: rgba(255,255,255,0.5);
 		/*background:rgba(140, 199, 90, 0.6)*/
 	}
 	section{
@@ -159,65 +176,66 @@
 		position: relative;
 		width:42%;
 		float:left;
-		height:500px;
+		/*height:500px;*/
 		/*right:-2000px;*/
 		/*width:500px;*/
 		/*-webkit-transform: rotate(30deg);*/
 	}
 	#projects{
-		height:500px;
+		/*height:500px;*/
 		/*background:rgba(140,199,90,0.6);*/
 	}
 	#contact{
-		height:500px;
+		/*height:500px;*/
 		/*background:rgba(36,36,36,0.6)*/
 	}
 	#team{
-		background: rgba(70, 147, 250, 1);
+		/*background: rgba(70, 147, 250, 1);*/
 		padding: 10px;
 		font-size: 2em;
-		border-radius:500px;
-		height:550px;
-		width:550px;
-		border:20px solid #333;
+		border-radius: 500px;
+		/*height: 100%;*/
+		width: 40%;
+		/*border: 20px solid #333;*/
 		position: relative;
-		top:-140px;
-		-webkit-transition:top 0.3s ease-in-out;
-
+		/*top: -368px;*/
+		-webkit-transition: top 0.3s ease-in-out;
+		text-align: left;
 	}
 	#team.show{
-		margin-top:-153px;
+		/*margin-top:-153px;*/
 	}
 	#team h1{
-		margin-top: 64px;
+		/*margin-top: 64px;*/
 		font-size: 2em;
 		color: white;
-		text-align: right;
+		text-align: left;
 	}
 	#team .text{
-		width: 448px;
-		height: 359px;
-		margin-top: 92px;
-		margin-left: 29px;
+		width: 617px;
+		/*height: 359px;*/
+		/*margin-top: 124px;*/
 		padding: 10px;
 		overflow: hidden;
+		float: right;
+		text-align: left;
+
 	}
 
 	#me{
-		z-index:2;
+		z-index: 2;
 		background: url('img/me.jpg') 0 0 no-repeat;
 		background-size: 200%;
 		border-radius: 300px;
 		background-position: -68px -31px;
-		position: relative;
-		top: 58px;
-		left: 35%;
-		-webkit-transition:all 0.6s ease-in-out;
-	}
-	#me.show{
+		margin-left:50px;
+		-webkit-transition: all 0.6s ease-in-out;
 		width: 200px;
 		height: 200px;
 		border: 30px solid rgba(70, 147, 250, 0.6);
+	}
+	#me.show{
+
 	}
 	#who{
 		-webkit-transition:opacity 0.2s ease-in-out;
@@ -244,70 +262,151 @@
 	.show{
 		opacity: 1 !important;
 	}
+	#track{
+		/*width:5000px;*/
+		background: rgba(255,255,255,0.8);
+		color:#000;
+		overflow: hidden;
+	}
+	#track h1{
+		color:#000;
+	}
+	#splash{}
+	#track ul{
+		width:3000px;
+	}
+	#track ul li{display: inline-block;}
+	/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+	#splash{
+		font-size:6em;
+		height:140px;
+		padding-top:50px;
+	}
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
 	</style>
-	<div id="wrapper">
-		<header>
-			<div class="inner">
-				<nav>
-					<ul>
-						<li><a href="#about">About</a></li>
-						<li><a href="#projects">Projects</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<section id="splash"></section>
-		<section id="about">
-			<div id="me"></div>
-			<div id="team" class="inner off-screen-top">
-				<div class="text" class="inner">
-					<h1>Who runs the Null Empire? <span id="who">It's Matt Null.</span></h1>
-				</div>
-			</div>
-		</section>
-<!-- 		<section id="whatwebuild">
-			<div class="inner">
-				<h1>WHAT WE BUILD</h1>
-				<ul class="big-list">
-					<li>
-						Websites
-					</li>
-					<li>
-						Web Applications
-					</li>
-					<li>
-						Mobile Web Applications
-					</li>
-					<li>
-						iPhone Apps
-					</li>
-					<li>
-						Android Apps
-					</li>
-					<li>
-						Rapid Prototypes
-					</li>
-				</ul>
-			</div>
-		</section>
-		<section id="projects">
-			<div class="inner">
-				<h2>Projects</h2>
-				<ul class="big-list">
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-				</ul>
-			</div>
-		</section>
-		<section id="contact">
-			<div class="inner">
-				<h2>Contact</h2>
-			</div>
-		</section> -->
+
+	<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section id="splash"><span id="word"></span> / <span id="logo">Null Empire</span></section>
+	<div id="track">
+		<ul>
+			<li>
+				<section id="about">
+					<div id="me"></div>
+				</section>
+			</li>
+			<li>
+				<section id="about">
+					<div id="me"></div>
+				</section>
+			</li>
+			<li>
+				<section id="about">
+					<div id="me"></div>
+				</section>
+			</li>
+			<li>
+				<section id="about">
+					<div id="me"></div>
+				</section>
+			</li>
+			<li>
+				<section id="about">
+					<div id="me"></div>
+				</section>
+			</li>
+			<li>
+				<section id="about">
+					<div id="me"></div>
+				</section>
+			</li>
+			<li>
+				<section id="about">
+					<div id="me"></div>
+				</section>
+			</li>
+			<li>
+				<section id="about">
+					<div id="me"></div>
+				</section>
+			</li>
+			<li>
+				<section id="about">
+					<div id="me"></div>
+				</section>
+			</li>
+			<li>
+				<h1>Who runs the Null Empire? <span id="who">It's Matt Null.</span></h1>
+			</li>
+		</ul>
 	</div>
+	<div id="bg"></div>
 	<!-- <div id="watermark">Null Empire</div> -->
 	<script>
 	$(function(){
@@ -316,20 +415,20 @@
 			'{Create}',
 			'{Innovate}'
 		];
-		var splash = $('#splash');
+		var word = $('#word');
 
-		splash.html(words[Math.floor(Math.random() * words.length)]);
-		splash.addClass('highlight')
+		word.html(words[Math.floor(Math.random() * words.length)]);
+		word.addClass('highlight')
 		setTimeout(function(){
-			splash.addClass('show');
-			splash.removeClass('highlight')
+			word.addClass('show');
+			word.removeClass('highlight')
 			$('#watermark').addClass('show')
-			$('#team').removeClass('off-screen-top');
+			// $('#team').removeClass('off-screen-top');
 			$('#me').addClass('show');
 			setTimeout(function(){
 				$('#who').addClass('show');
 			}, 1000)
-		}, 2000)
+		}, 3000)
 
 		$('nav a').on('click', function(e){
 			var href = $(this).attr('href');
@@ -376,6 +475,39 @@
 		// 		right += pos;
 		// 	}
 		// });
+
+		$('#track').bind('ontouchmove', function(e){
+			e.stopPropagation();
+		});
+		$('#track').kinetic({
+			triggerHardware : true,
+			maxvelocity : 100
+		});
 	});
+
+	document.ontouchmove = function(e){
+		e.preventDefault();
+	};
+	$(window).resize(function(){
+		$('#track').kinetic('attach');
+	});
+	// window.ondevicemotion = function(e) {
+	// 	// e.accelerationIncludingGravity.x
+	// 	// e.accelerationIncludingGravity.y
+	// 	// e.accelerationIncludingGravity.z
+	// 	var x = e.acceleration.x;
+	// 	// console.log(e.accelerationIncludingGravity.7)
+	// 	console.log(x /0.01)
+	// 	if(x > 0){
+	// 		$('#track').kinetic('stop');
+	// 		$('#track').kinetic('start', { velocity: -30 });
+	// 	}
+	// 	else if(x < 0){
+	// 		$('#track').kinetic('stop');
+	// 		$('#track').kinetic('start', { velocity: 30 });
+	// 	}
+	// };
+
 	</script>
+</body>
 </html>
