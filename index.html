@@ -7,367 +7,92 @@
 	</head> 
 	<style>
 	::selection {
-		background:rgba(37,25,48,0.7);;
+		background:rgba(37,25,48,0.7);
 		color:#fff;
 	}
 
 	::-moz-selection {
-		background:rgba(37,25,48,0.7);;
+		background:rgba(37,25,48,0.7);
 		color:#fff;
 	}
 
 	::-webkit-selection {
-		background:rgba(37,25,48,0.7);;
+		background:rgba(37,25,48,0.7);
 		color:#fff;
 	} 
 	body, h1, h2 {
-	   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	   font-weight: 300;
-	   	padding:0;
-		margin:0;
-		color:#666;
-	}
-	ul,li{
-		list-style: none;
-		margin:0;
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight: 300;
 		padding:0;
-	}
-	#watermark{
-		text-transform: uppercase;
-		color: white;
-		text-shadow: 0px 0px 2px rgba(17, 17, 17, 0.3);
-		font-size: 34em;
-		color: white;
-		position: fixed;
-		z-index: -5;
-		left: 0;
-		top:-90px;
-		opacity:0;
-		-webkit-transition:opacity 5s ease-in-out;
-	}
-	#watermark.show{
-		opacity: 0.6;
-	}
-	#wrapper{
-		margin:0 auto;
-	}
-	#splash{
-		/*background:rgba(37,25,48,0.6);*/
-		padding:30px 0 60px 0;
-		height:200px;
-		text-align: center;
-		font-size:940%;
-		color:rgba(255,255,255,0);
-		-webkit-transition: all 2s ease-in-out;
-	}
-	#splash.show{
-		color:rgba(1,1,1,1);
-	}
-	#splash.highlight{
-		text-shadow:0px 0px 50px rgba(70,147,250,1);
-	}
-	.inner{
-		width:650px;
-		margin:0 auto;
-		overflow: hidden;
+		margin:0;
+		color:#fff;
+		
 	}
 	header{
-		padding:30px 0;
-		overflow: hidden;
-		position: fixed;
-		top:0;
-		right:0;
-		z-index: 1000;
-		padding-right: 20px;
-		/*background:rgba(140, 199, 90, 0.6)*/
+		width:80%;
+		padding:20px 0;
+		margin:20px auto;
+	}
+	header h1{
+		font-size:3em;
+		font-weight:100;
+		color:#333;
+	}
+	#header-img{
+		background:url('header2.png') 0 0 no-repeat;
+		background-size: cover;
+		width:100%;
+		height:600px;
+		background-position: 0px -200px;
+		text-align: center;
+		font-size:7em;
+		color:#fff;
+		padding-top:140px;
+		box-shadow: inset 0px 0px 12px #000;
+	}
+	#header-img .text{
+		text-shadow:0px 0px 10px #000;
+		background: rgba(37,25,48,0.7);
+		margin:10px 0 40px 0;
+		padding: 5px 0px;
+	}
+	#header-img .text.green{
+		background: rgba(110,171,68,0.7)
 	}
 	section{
-		padding:20px 0;
+		width:80%;
+		margin:0 auto;
 	}
-	nav{
-		text-align: right;
-	}
-	nav ul, nav li{
-		list-style:none;
-		margin:0;
-		padding:0;
-
-	}
-	nav ul li{
-		display: inline-block;
-		margin-right: 25px;	
-	}
-	nav ul li:last-child{
-		margin-right: 0;
-	}
-	nav a {
-		text-decoration: none;
-		color: #111;
-		font-size: 1.2em;
-		text-transform: uppercase;
-		text-shadow:1px 1px 1px #fff;
-	}
-	nav a:hover{
-		color:rgba(140,199,90,0.6);
-		text-shadow:none;
-	}
-	ul.big-list li{
-		background:#fff;
-		margin:10px 0;
-		padding:20px 10px;
-		font-size:2.5em;
-		border-radius: 5px;
-		background:rgba(140,199,90,1);
-		color:#fff;
-	}
-	.green{
-		background:rgba(140,199,90,0.6);
-	}
-	.purple{
-		background:rgba(37,25,48,0.6);
-	}
-	p.text{
-		line-height: 2.5em;
-		color:#111;
-		background: #fff;
-		padding:20px;
-		margin:5px;
-	}
-	/** sections **/
-	#about h2, #projects h2, #contact h2{
-		text-align: center;
-		font-size: 3em;
-		color:#666;
-		margin-bottom:30px;
-	}
-	#about{
-		/*background:rgba(70,147,250,0.6);*/
-		position: relative;
-		overflow: hidden;
-
-	}
-
-	#about p.text{
-		position: relative;
-		width:42%;
-		float:left;
-		height:500px;
-		/*right:-2000px;*/
-		/*width:500px;*/
-		/*-webkit-transform: rotate(30deg);*/
-	}
-	#projects{
-		height:500px;
-		/*background:rgba(140,199,90,0.6);*/
-	}
-	#contact{
-		height:500px;
-		/*background:rgba(36,36,36,0.6)*/
-	}
-	#team{
-		background: rgba(70, 147, 250, 1);
-		padding: 10px;
-		font-size: 2em;
-		border-radius:500px;
-		height:550px;
-		width:550px;
-		border:20px solid #333;
-		position: relative;
-		top:-140px;
-		-webkit-transition:top 0.3s ease-in-out;
-
-	}
-	#team.show{
-		margin-top:-153px;
-	}
-	#team h1{
-		margin-top: 64px;
-		font-size: 2em;
-		color: white;
-		text-align: right;
-	}
-	#team .text{
-		width: 448px;
-		height: 359px;
-		margin-top: 92px;
-		margin-left: 29px;
-		padding: 10px;
-		overflow: hidden;
-	}
-
-	#me{
-		z-index:2;
-		background: url('me.jpg') 0 0 no-repeat;
-		background-size: 200%;
-		border-radius: 300px;
-		background-position: -68px -31px;
-		position: relative;
-		top: 58px;
-		left: 35%;
-		-webkit-transition:all 0.6s ease-in-out;
-	}
-	#me.show{
-		width: 200px;
-		height: 200px;
-		border: 30px solid rgba(70, 147, 250, 0.6);
-	}
-	#who{
-		-webkit-transition:opacity 0.2s ease-in-out;
-	}
-	#who{
-		opacity: 0;
-	}
-
-	#whatwebuild{
-		-webkit-transition:all 0.2s ease-in-out;
-		position: relative;
-	}
-	#whatwebuild.off-screen-right{
-	}
-	#whatwebuild .big-list li{
-
-	}
-	.off-screen-right{
-		right:-5000px;
-	}
-	.off-screen-top{
-		top:-5000px !important;
-	}
-	.show{
-		opacity: 1 !important;
+	section h1{
+		font-size:4em;
+		color: #333;
 	}
 	</style>
 	<div id="wrapper">
-		<header>
-			<div class="inner">
-				<nav>
-					<ul>
-						<li><a href="#about">About</a></li>
-						<li><a href="#projects">Projects</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<section id="splash"></section>
-		<section id="about">
-			<div id="me"></div>
-			<div id="team" class="inner off-screen-top">
-				<div class="text" class="inner">
-					<h1>Who runs the Null Empire? <span id="who">It's Matt Null.</span></h1>
-				</div>
-			</div>
+		<header><h1>Null Empire</h1></header>
+		<div id="header-img">
+<!-- 			<div class="text">Null Empire</div>
+ -->			<div class="text green">We craft the web for you.</div>
+		</div>
+		<section>
+			<h1>What we do</h1>
 		</section>
-		<section id="whatwebuild">
-			<div class="inner">
-				<h1>WHAT WE BUILD</h1>
-				<ul class="big-list">
-					<li>
-						Websites
-					</li>
-					<li>
-						Web Applications
-					</li>
-					<li>
-						Mobile Web Applications
-					</li>
-					<li>
-						iPhone Apps
-					</li>
-					<li>
-						Android Apps
-					</li>
-					<li>
-						Rapid Prototypes
-					</li>
-				</ul>
-			</div>
+		<section>
+			<h1>How we do it</h1>
 		</section>
-		<section id="projects">
-			<div class="inner">
-				<h2>Projects</h2>
-				<ul class="big-list">
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-				</ul>
-			</div>
+		<section>
+			<h1>What we've already done</h1>
 		</section>
-		<section id="contact">
-			<div class="inner">
-				<h2>Contact</h2>
-			</div>
+		<section>
+			<h1>Let's work together</h1>
 		</section>
 	</div>
-	<div id="watermark">Null Empire</div>
+
 	<script>
+	var words = ['Build', 'Innovate', 'Create']
 	$(function(){
-		var words = [
-			'{Build}',
-			'{Create}',
-			'{Innovate}'
-		];
-		var splash = $('#splash');
 
-		splash.html(words[Math.floor(Math.random() * words.length)]);
-		splash.addClass('highlight')
-		setTimeout(function(){
-			splash.addClass('show');
-			splash.removeClass('highlight')
-			$('#watermark').addClass('show')
-			$('#team').removeClass('off-screen-top');
-			$('#me').addClass('show');
-			setTimeout(function(){
-				$('#who').addClass('show');
-			}, 1000)
-		}, 2000)
-
-		$('nav a').on('click', function(e){
-			var href = $(this).attr('href');
-			e.preventDefault();
-
-			$(window).scrollTo($(href), 200);
-		});
-
-		/** FACNY SCROLL like http://nizoapp.com/ **/
-		/** 
-		ON scroll get the position of the page and suck in its UI elements as you get closer to it 
-			example - when you get closer to the contacts page the form gets sucked into the container in peices
-			... calculate container position as it approaches zero
-		**/
-		
-		right = -2000;
-		angle = 70;
-
-		var elements = [{
-			container : $('#about .inner'),
-			objects : $('#about p.text')
-		}];
-		var whatwebuild = $('#whatwebuild');
-
-		$(window).scroll(function(){
-			var scrollTop = $(this).scrollTop();
-			var pos = whatwebuild.offset().top;
-			console.log(pos, scrollTop)
-		});
-		// $(window).scroll(function(){
-		// 	//DO THE MAGIC
-		// 	var scrollTop = $(this).scrollTop();
-		// 	for(var i = 0; i < elements.length; i++){
-		// 		var el = elements[i].container;
-		// 		var elOffset = el.offset();
-		// 		var elLeft = elOffset.left;
-		// 		var elCenter = elOffset.left - el.width() / 2;
-		// 		var viewportPos = elOffset.top - scrollTop;
-		// 		var o = elements[i].objects;
-		// 		var objectPos = o.offset().left - o.width();
-		// 		pos = viewportPos / right
-		// 		console.log(viewportPos, right)
-		// 		$('#about p.text').css({'right' : pos+'px'});
-		// 		right += pos;
-		// 	}
-		// });
 	});
+
 	</script>
 </html>
