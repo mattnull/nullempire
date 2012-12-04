@@ -6,6 +6,16 @@
 		<script src="jquery.scrollto.min.js"></script>
 	</head> 
 	<style>
+	@font-face {
+	font-family: 'Nexa Black';
+	src: url('public/fonts/nexa/nexa-black.eot');
+	src: url('public/fonts/nexa/nexa-black.eot?#iefix') format('embedded-opentype'),
+	     url('public/fonts/nexa/nexa-black.woff') format('woff'),
+	     url('public/fonts/nexa/nexa-black.ttf') format('truetype'),
+	     url('public/fonts/nexa/nexa-black.svg#ywftsvg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 	::selection {
 		background:rgba(37,25,48,0.7);
 		color:#fff;
@@ -25,7 +35,7 @@
 		font-weight: 300;
 		padding:0;
 		margin:0;
-		color:#fff;
+		color:#000;
 		
 	}
 	header{
@@ -47,17 +57,27 @@
 		text-align: center;
 		font-size:7em;
 		color:#fff;
-		padding-top:140px;
+		/*padding-top:140px;*/
+		font-family: 'Nexa Black';
 		box-shadow: inset 0px 0px 12px #000;
+		text-transform: uppercase;
 	}
 	#header-img .text{
 		text-shadow:0px 0px 10px #000;
-		background: rgba(37,25,48,0.7);
-		margin:10px 0 40px 0;
+		margin:10px 0;
 		padding: 5px 0px;
+		line-height: 1.8em;
+		margin:0 auto;
+		text-align: center;
+	}
+	#header-img .text .really-big{
+		font-size:1.5em;
 	}
 	#header-img .text.green{
 		background: rgba(110,171,68,0.7)
+	}
+	#header-img .text.purple{
+		background: rgba(37,25,48,0.7);
 	}
 	section{
 		width:80%;
@@ -66,13 +86,17 @@
 	section h1{
 		font-size:4em;
 		color: #333;
+		font-family: 'Nexa Black';
+	}
+	.spaced{
+		letter-spacing: 0.8em;
 	}
 	</style>
 	<div id="wrapper">
 		<header><h1>Null Empire</h1></header>
 		<div id="header-img">
 <!-- 			<div class="text">Null Empire</div>
- -->			<div class="text green">We craft the web for you.</div>
+ -->			<div class="text"><span class="spaced">We make</span><br/> the web <br/><span class="really-big">badass.</span></div>
 		</div>
 		<section>
 			<h1>What we do</h1>
@@ -82,6 +106,18 @@
 		</section>
 		<section>
 			<h1>What we've already done</h1>
+			<img src="logo-lg.png" />
+		</section>
+		<section>
+			<h1>[2013] We will be at...</h1>
+			<ul>
+				<li>
+					<a href="http://www.10gen.com/content/mongodb-boulder">MongoDB Boulder</a> [Jan 24th in Boulder, CO]
+				</li>
+				<li>
+					<a href="http://circlesconference.com/">Circles Conference 2013</a> [ Sept 19-20 in Grapevine, TX]
+				</li>
+			</ul>
 		</section>
 		<section>
 			<h1>Let's work together</h1>
