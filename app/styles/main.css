@@ -1,0 +1,55 @@
+@font-face{font-family:'Nexa Black';src:url("/fonts/nexa/nexa-black.eot");src:url("/fonts/nexa/nexa-black.eot?#iefix") format('embedded-opentype'),url("/fonts/nexa/nexa-black.woff") format('woff'),url("/fonts/nexa/nexa-black.ttf") format('truetype'),url("/fonts/nexa/nexa-black.svg#ywftsvg") format('svg');font-weight:normal;font-style:normal}
+@font-face{font-family:'League-Gothic';src:url("/fonts/League-Gothic/League_Gothic.otf");font-weight:normal;font-style:normal}
+::selection{background-color:#333;color:#68b6d1;text-shadow:none}
+body{font-family:'HelveticaNeue-UltraLight','Helvetica Neue UltraLight','Helvetica Neue',Arial,Helvetica,sans-serif;font-weight:300;margin:0;padding:0}
+header{padding:40px 20px;overflow:hidden;border-bottom:20px solid #68b6d1;}
+header #logo{float:left;top:-15px;position:relative;min-width:400px;}
+header #logo span.text{font-size:3em;position:relative;top:10px;font-weight:bold}
+header #logo div{-webkit-transition:all .2s ease-in-out}
+header #logo div.emblem{float:left;position:relative;top:5px;-webkit-transform:rotate(45deg)}
+header #logo div:hover{-webkit-transform:rotate(1080deg)}
+header #logo div.emblem,header #logo div{border:1px solid #333;width:50px;height:50px;margin:5px}
+header #logo div.red{border-color:#a55570}
+header #logo div.blue{border-color:#024678}
+header #logo div.rotated{-webkit-transform:rotate(45deg)}
+header .null{color:#024678;font-weight:200;margin-left:15px}
+header nav{overflow:hidden;float:right;}
+header nav ul{margin:0;padding:0;float:left;}
+@media 480px+{header nav ul{float:none}
+}header nav ul li{display:inline;display:inline-block;margin:0 10px;padding:12px 5px}
+header nav a{text-decoration:none;font-size:2em;font-weight:500;text-transform:uppercase;color:#333;font-weight:200;-webkit-transition:all .5s ease-in-out}
+header nav a:hover{color:#80a34c;text-decoration:overline}
+section{overflow:hidden;text-align:center;padding:10px;margin:0 auto}
+div.shapes{overflow:hidden;margin:0 auto;}
+div.shapes div.shape{width:200px;height:200px;background:transparent;border:2px solid #fff;margin:5px;float:left;-webkit-transition:all .2s ease-in-out}
+div.shapes div.shape.me{background:url("/images/me-big.png") no-repeat -99px 0;background-size:cover}
+div.shapes div.shape.pp{background:url("/images/pp.jpg") no-repeat 0 -37px;background-size:cover}
+div.shapes div.shape.sxsw{background:url("/images/sxsw.png") no-repeat -37px 0;background-size:cover}
+div.shapes div.circle{border-radius:200px}
+div.shapes div.circle:hover{border-radius:0}
+div.shapes div.triangle{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid #000}
+div.shapes div.check{width:100px;height:150px;border-left:0;border-top:0;-webkit-transform:rotate(45deg)}
+div.shapes div.checkbox{position:relative;}
+div.shapes div.checkbox div{width:100px;height:200px;border-left:0;border-top:0;-webkit-transform:rotate(45deg);border-width:29px;position:absolute;top:-68px;right:-6px}
+#main{max-height:300px;color:#fff;font-weight:500;background:url("/images/me-big.png") 0 -288px no-repeat;background-size:cover;}
+#main div.text{font-size:8em;color:#fff;text-shadow:-1px 0 #333,0 1px #333,1px 0 #333,0 -1px #333;font-family:'League-Gothic',Arial;text-transform:uppercase;float:left;width:50%;text-align:left}
+#team{max-height:300px;color:#fff;font-weight:500;}
+#team div.text{font-size:5em;color:#fff;text-shadow:-1px 0 #68b6d1,0 1px #68b6d1,1px 0 #68b6d1,0 -1px #68b6d1;font-family:'League-Gothic',Helvetica,Arial;text-transform:uppercase;float:right;width:20%;text-align:left}
+#contact{min-height:400px;text-shadow:-1px 0 #fff,0 1px #fff,1px 0 #fff,0 -1px #fff;color:#000;font-size:2em;padding:10px 25px;}
+#contact div.text{font-size:2em;color:#333;text-shadow:-1px 0 #fff,0 1px #fff,1px 0 #fff,0 -1px #fff;font-family:'League-Gothic',Helvetica,Arial;text-transform:uppercase;text-align:left}
+#contact form{text-align:center;}
+#contact form input[type="text"],#contact form input[type="email"]{background:#fff;border-radius:7px;border:0;font-size:1em;padding:10px 5px;font-family:Georgia,Helvetica,Arial;font-style:italic;width:100%;margin-bottom:10px}
+#contact form textarea{width:99%;height:200px;margin:0 auto;padding:10px;border-radius:7px;font-size:1em;font-family:Georgia,Helvetica,Arial;font-style:italic}
+#contact form button{border:0;padding:10px 25px;border-radius:7px;font-size:1em;font-family:Georgia,Helvetica,Arial;font-style:italic;background:#fff;cursor:pointer}
+#contact form button:hover{background:#68b6d1;color:#fff}
+footer{background:#fff;text-shadow:-1px 0 #333,0 1px #333,1px 0 #333,0 -1px #333;font-family:'League-Gothic',Helvetica,Arial;font-size:8em;color:#fff;text-align:center}
+@media (max-width: 480px){header{padding-bottom:5px;}
+header #logo{float:none;text-align:center;min-width:auto;}
+header #logo div.emblem{position:static;float:none;margin:0 auto}
+header #logo div.emblem,header #logo div{width:70px;height:70px}
+header #logo span.text{top:27px}
+header nav{float:none;margin:0 auto;text-align:center;}
+header nav ul{margin-top:10px;}
+header nav ul li{font-size:1em}
+}.left{float:left}
+.right{float:right}

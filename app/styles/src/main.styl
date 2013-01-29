@@ -1,0 +1,290 @@
+@font-face 
+	font-family: 'Nexa Black';
+	src: url('/fonts/nexa/nexa-black.eot');
+	src: url('/fonts/nexa/nexa-black.eot?#iefix') format('embedded-opentype'),
+	     url('/fonts/nexa/nexa-black.woff') format('woff'),
+	     url('/fonts/nexa/nexa-black.ttf') format('truetype'),
+	     url('/fonts/nexa/nexa-black.svg#ywftsvg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+@font-face 
+	font-family: 'League-Gothic';
+	src: url('/fonts/League-Gothic/League_Gothic.otf');
+	font-weight: normal;
+	font-style: normal;
+::selection
+	background-color: #333;
+	color: rgba(104,182,209,1);
+	text-shadow:none
+body
+	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif; 
+	font-weight: 300
+	margin:0
+	padding:0
+header
+	padding:40px 20px;
+	overflow:hidden
+	border-bottom:20px solid rgba(104,182,209,1)
+	#logo
+		float:left;
+		top: -15px;
+		position: relative;
+		min-width:400px
+		span.text 
+			font-size:3em
+			position:relative
+			top:10px
+			font-weight:bold
+		div
+			-webkit-transition:all 0.2s ease-in-out
+		div.emblem
+			float:left
+			position:relative
+			top:5px
+			-webkit-transform:rotate(45deg)
+		
+		div:hover
+			-webkit-transform:rotate(1080deg)
+		div.emblem, div
+			border:1px solid #333
+			width:50px
+			height:50px
+			margin:5px;
+
+		div.red 
+			border-color:rgba(165,85,112,1)
+			// background:rgba(128,163,76,1)
+		div.blue 
+			border-color:rgba(2,70,120,1)
+		div.rotated
+			-webkit-transform:rotate(45deg)
+	.null 
+		color:rgba(2,70,120,1);
+		font-weight:200
+		margin-left:15px;
+	nav
+		overflow:hidden;
+		float:right
+		ul 
+			margin:0
+			padding:0
+			float:left;
+			@media 480px+
+				float:none
+			li 
+				display:inline
+				display: inline-block;
+				margin: 0 10px;
+				padding: 12px 5px;
+		a 
+			text-decoration:none
+			font-size:2em
+			font-weight:500
+			text-transform:uppercase
+			color:#333
+			font-weight 200
+			-webkit-transition:all 0.5s ease-in-out
+		a:hover
+			color:rgba(128,163,76,1)
+			text-decoration overline
+
+section
+	overflow:hidden
+	text-align center
+	padding 10px
+	margin 0 auto
+
+div.shapes
+	overflow hidden
+	margin:0 auto
+	div.shape
+		width:200px
+		height:200px
+		background:transparent	
+		border:2px solid #fff
+		margin:5px
+		float:left;
+		-webkit-transition:all 0.2s ease-in-out
+	div.shape.me
+		background: url("/images/me-big.png") no-repeat -99px 0;
+		background-size: cover;
+	div.shape.pp
+		background: url("/images/pp.jpg") no-repeat 0 -37px;
+		background-size: cover;
+	div.shape.sxsw
+		background: url("/images/sxsw.png") no-repeat -37px 0px;
+		background-size: cover;
+	div.circle
+		border-radius:200px;
+
+	div.circle:hover
+		border-radius:0
+	div.triangle
+		width: 0; 
+		height: 0; 
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 5px solid black;
+	div.check
+		width: 100px;
+		height: 150px;
+		border-left: 0;
+		border-top: 0;
+		-webkit-transform: rotate(45deg);
+	div.checkbox
+		position:relative
+		div
+			width: 100px;
+			height: 200px;
+			border-left: 0;
+			border-top: 0;
+			-webkit-transform: rotate(45deg);
+			border-width: 29px;
+			position: absolute;
+			top: -68px;
+			right: -6px;
+
+
+#main 
+	max-height:300px
+	// background:rgba(165,85,112,1)
+	color:#fff
+	font-weight:500
+	background:url("/images/me-big.png") 0 -288px no-repeat
+	background-size:cover
+	// border-top:20px solid rgba(104,182,209,1)
+	// border-bottom:20px solid rgba(104,182,209,1)
+	div.text
+		font-size:8em;
+		color:#fff
+		text-shadow: -1px 0 #333, 0 1px #33, 1px 0 #333, 0 -1px #333; 
+		font-family:'League-Gothic', Arial;
+		text-transform:uppercase
+		float:left;
+		width:50%
+		text-align:left;
+#team 
+	max-height:300px
+	// background:rgba(104,182,209,1)
+	color:#fff
+	font-weight:500
+
+	// border-top:20px solid rgba(165,85,112,1)
+	// border-bottom:20px solid rgba(165,85,112,1)
+	div.text
+		font-size:5em;
+		color:#fff
+		text-shadow: -1px 0 rgba(104,182,209,1), 0 1px rgba(104,182,209,1), 1px 0 rgba(104,182,209,1), 0 -1px rgba(104,182,209,1); 
+		font-family:'League-Gothic', Helvetica, Arial
+		// font-style:italic
+		text-transform:uppercase
+		float:right;
+		width:20%
+		text-align:left;
+#contact
+	min-height:400px
+	// background:#333
+	text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff; 
+	color:#000
+	font-size:2em
+	padding:10px 25px;
+	// border-top:20px solid #333
+	// border-bottom:20px solid #333
+	div.text 
+		font-size:2em;
+		color:#333
+		text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff; 
+		font-family:'League-Gothic', Helvetica, Arial
+		// font-style:italic
+		text-transform:uppercase
+		text-align:left;
+	form 
+		text-align center
+		input[type="text"], input[type="email"]
+			background:#fff
+			border-radius:7px
+			border:0
+			font-size:1em
+			padding:10px 5px;
+			font-family:Georgia, Helvetica, Arial
+			font-style:italic;
+			width:100%
+			margin-bottom:10px
+		textarea
+			width:99%
+			height:200px
+			margin:0 auto
+			padding:10px
+			border-radius:7px
+			font-size:1em
+			font-family:Georgia, Helvetica, Arial
+			font-style:italic;
+		button
+			border:0
+			padding:10px 25px;
+			border-radius:7px;
+			font-size:1em
+			font-family:Georgia, Helvetica, Arial
+			font-style:italic
+			background:#fff
+			cursor:pointer;
+		button:hover
+			background:rgba(104,182,209,1)
+			color:#fff
+footer
+
+	background:#fff
+	text-shadow: -1px 0 #333, 0 1px #333, 1px 0 #333, 0 -1px #333; 
+	font-family:'League-Gothic', Helvetica, Arial
+	font-size:8em;
+	color:#fff
+	text-align:center
+/* Media Queries **/
+
+@media (max-width: 480px)
+	header
+		padding-bottom:5px
+		#logo
+			float:none
+			text-align:center
+			min-width:auto
+			div.emblem
+				position: static;
+				float: none;
+				margin: 0 auto;
+
+			div.emblem, div
+				width:70px
+				height:70px
+			span.text 
+				top:27px
+		nav
+			float:none
+			margin:0 auto
+			text-align:center;
+			ul
+				margin-top:10px
+				li
+					font-size:1em
+
+//utility
+.left
+	float:left;
+.right
+	float:right
+
+// // 760+
+// @media (min-width: 760px)
+// 	#main
+// 		padding: 0 1em
+
+// // 830+
+// @media (min-width: 830px)
+// 	#main
+// 		padding: 0 2em
+
+// // 930+
+// @media (min-width: 930px)
+// 	#main
+// 		padding: 0 4em
+	
