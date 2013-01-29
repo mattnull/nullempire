@@ -19,10 +19,7 @@ module.exports = function( grunt ) {
     coffee: {
       compile: {
         files: {
-          'temp/scripts/*.js': 'app/scripts/src/**/*.coffee' 
-        },
-        options: {
-          basePath: 'app/scripts'
+          'app/scripts/*.js': 'app/scripts/src/*.coffee' 
         }
       }
     },
