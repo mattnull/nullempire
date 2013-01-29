@@ -35,7 +35,7 @@ div.shapes .checkbox div{width:100px;height:200px;border-left:0;border-top:0;-we
 #main{min-height:400px;color:#fff;font-weight:500;background:url("/images/me-big.png") 0 -288px no-repeat;background-size:cover;}
 #main div.text{font-size:8em;color:#fff;text-shadow:-1px 0 #333,0 1px #333,1px 0 #333,0 -1px #333;font-family:'League-Gothic',Arial;text-transform:uppercase;float:left;width:50%;text-align:left}
 #team{min-height:300px;color:#fff;font-weight:500;border-top:20px solid #a55570;border-bottom:20px solid #a55570;}
-#team div.text{font-size:5em;color:#fff;text-shadow:-1px 0 #68b6d1,0 1px #68b6d1,1px 0 #68b6d1,0 -1px #68b6d1;font-family:'League-Gothic',Helvetica,Arial;text-transform:uppercase;float:right;width:20%;text-align:left}
+#team div.text{font-size:5em;color:#fff;text-shadow:-1px 0 #68b6d1,0 1px #68b6d1,1px 0 #68b6d1,0 -1px #68b6d1;font-family:'League-Gothic',Helvetica,Arial;text-transform:uppercase;float:right;width:20%;text-align:right}
 #work{text-shadow:-1px 0 #000,0 1px #000,1px 0 #000,0 -1px #000;font-family:'League-Gothic',Helvetica,Arial;background:#fff;padding:20px 0;border-top:20px solid #68b6d1;}
 #work div.shapes{max-width:856px;}
 #work div.shapes .shape{cursor:pointer}
