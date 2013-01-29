@@ -97,7 +97,7 @@ section
 div.shapes
 	overflow hidden
 	margin:0 auto
-	div.shape
+	.shape
 		width:200px
 		height:200px
 		background:transparent	
@@ -105,33 +105,36 @@ div.shapes
 		margin:5px
 		float:left;
 		-webkit-transition:all 0.2s ease-in-out
-	div.shape.me
+	.shape.me
 		background: url("/images/me-big.png") no-repeat -99px 0;
 		background-size: cover;
-	div.shape.pp
+	.shape.pp
 		background: url("/images/pp.jpg") no-repeat 0 -37px;
 		background-size: cover;
-	div.shape.sxsw
+	.shape.sxsw
 		background: url("/images/sxsw.png") no-repeat -37px 0px;
 		background-size: cover;
-	div.circle
+	.shape.clipper
+		background: url("/images/clipper.png") no-repeat -131px 0px;
+		background-size: cover;
+	.circle
 		border-radius:200px;
 
-	div.circle:hover
+	.circle:hover
 		border-radius:0
-	div.triangle
+	.triangle
 		width: 0; 
 		height: 0; 
 		border-left: 5px solid transparent;
 		border-right: 5px solid transparent;
 		border-bottom: 5px solid black;
-	div.check
+	.check
 		width: 100px;
 		height: 150px;
 		border-left: 0;
 		border-top: 0;
 		-webkit-transform: rotate(45deg);
-	div.checkbox
+	.checkbox
 		position:relative
 		div
 			width: 100px;
@@ -146,7 +149,7 @@ div.shapes
 
 
 #main 
-	max-height:300px
+	min-height:400px
 	// background:rgba(165,85,112,1)
 	color:#fff
 	font-weight:500
@@ -164,13 +167,13 @@ div.shapes
 		width:50%
 		text-align:left;
 #team 
-	max-height:300px
+	min-height:300px
 	// background:rgba(104,182,209,1)
 	color:#fff
 	font-weight:500
 
-	// border-top:20px solid rgba(165,85,112,1)
-	// border-bottom:20px solid rgba(165,85,112,1)
+	border-top:20px solid rgba(165,85,112,1)
+	border-bottom:20px solid rgba(165,85,112,1)
 	div.text
 		font-size:5em;
 		color:#fff
@@ -181,6 +184,20 @@ div.shapes
 		float:right;
 		width:20%
 		text-align:left;
+#work
+	text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; 
+	font-family:'League-Gothic', Helvetica, Arial
+	background:#fff
+	padding:20px 0;
+	border-top:20px solid rgba(104,182,209,1)
+	div.shapes
+		max-width:856px
+		.shape
+			cursor:pointer
+	div.text 
+		font-size:8em;
+		color:#fff
+		text-transform: uppercase
 #contact
 	min-height:400px
 	// background:#333
@@ -188,8 +205,8 @@ div.shapes
 	color:#000
 	font-size:2em
 	padding:10px 25px;
-	// border-top:20px solid #333
-	// border-bottom:20px solid #333
+	border-top:20px solid #333
+	border-bottom:20px solid #333
 	div.text 
 		font-size:2em;
 		color:#333
@@ -202,18 +219,20 @@ div.shapes
 		text-align center
 		input[type="text"], input[type="email"]
 			background:#fff
-			border-radius:7px
+			
 			border:0
 			font-size:1em
-			padding:10px 5px;
+			padding:10px 0px;
 			font-family:Georgia, Helvetica, Arial
 			font-style:italic;
 			width:100%
 			margin-bottom:10px
+			outline:none;
+			border-bottom:1px solid #333
 		textarea
 			width:99%
 			height:200px
-			margin:0 auto
+			margin:10px auto
 			padding:10px
 			border-radius:7px
 			font-size:1em
@@ -226,11 +245,12 @@ div.shapes
 			font-size:1em
 			font-family:Georgia, Helvetica, Arial
 			font-style:italic
-			background:#fff
 			cursor:pointer;
+			-webkit-transition:all 0.3s ease-in-out
+			background:#333
+			color:#fff
 		button:hover
 			background:rgba(104,182,209,1)
-			color:#fff
 footer
 
 	background:#fff
@@ -266,7 +286,18 @@ footer
 				margin-top:10px
 				li
 					font-size:1em
-
+.social-list
+	a
+		font-size:2.5em;
+		list-style: none;
+		margin:0 10px;
+		/*color:rgba(2,70,120,0.8);*/
+		-webkit-transition:all 0.2s ease-in-out;
+		color:#fff;
+		text-shadow:0px 0px 4px #000;
+		text-decoration:none;
+	a:hover
+		color:rgba(104,182,209,1)
 //utility
 .left
 	float:left;

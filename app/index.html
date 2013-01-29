@@ -14,6 +14,7 @@
 
         
         <link rel="stylesheet" href="styles/main.css">
+        <link type="text/css" rel="stylesheet" href="/fonts/fontawesome2.0/css/font-awesome.css" />
         <script src="scripts/vendor/modernizr.min.js"></script>
     </head>
     <body>
@@ -24,8 +25,8 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="javascript:void(0);">W<span class="word">ork</span></a></li>
-                        <li><a href="javascript:void(0);">A<span class="word">bout</span></a></li>
+                        <li><a href="#work">W<span class="word">ork</span></a></li>
+                        <li><a href="#about">A<span class="word">bout</span></a></li>
                         <li><a href="#contact">C<span class="word">ontact</span></a></li>
                     </ul>
                 </nav>
@@ -43,6 +44,16 @@
                     <div class="shape circle sxsw"><div></div></div>
                 </div> -->
             </section>
+            <section id="work">
+                <div class="text">work</div>
+                <div class="shapes">
+                    <a href="https://itunes.apple.com/us/app/picturepalette/id527095741?ls=1&mt=8" target="_blank" class="shape circle pp"></a>
+                    <a href="javascript:void(0);" target="_blank" class="shape circle me"></a>
+                    <a href="javascript:void(0);" target="_blank" class="shape circle sxsw"></a>
+                    <a href="http://clipper.io" target="_blank" class="shape circle clipper"></a>
+
+                </div>
+            </section>
             <section id="team">
                 <!-- <div class="shapes left">
                     <div class="shape circle me"></div>
@@ -55,6 +66,8 @@
                     Z.Herring
                     <br/>
                     J.Lauters
+                    <br/>
+                    T.Woodson
                 </div>
             </section>
             <div id="contact">
@@ -71,7 +84,14 @@
                 </fom>
             </div>
         </div>
-        <footer>Goodbye!</footer>
+        <footer>
+            <div class="social-list">
+                <a href="http://github.com/mattnull" class="icon-github github"></a>
+                    <a href="http://linkedin.com/in/mattnull" class="icon-linkedin linkedin"></a>
+                    <a href="http://twitter.com/nullempire" class="icon-twitter twitter"></a>
+                    <a href="http://github.com/mattnull" class=""></a>
+            </div>
+        </footer>
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
@@ -82,8 +102,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
         
-        
-
+    
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
